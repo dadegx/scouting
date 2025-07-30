@@ -181,11 +181,7 @@ const styles = StyleSheet.create({
   statCard: {
     width: (width - 50) / 3,
     backgroundColor: theme.colors.cardBackground,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 3,
+    ...theme.shadows.small,
   },
   statContent: {
     alignItems: 'center',
@@ -204,11 +200,7 @@ const styles = StyleSheet.create({
     marginBottom: theme.spacing.md,
     backgroundColor: theme.colors.cardBackground,
     borderRadius: theme.borderRadius.md,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 3,
+    ...theme.shadows.small,
   },
   cardTitle: {
     ...theme.typography.h4,

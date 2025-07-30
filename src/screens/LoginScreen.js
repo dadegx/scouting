@@ -210,11 +210,7 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: theme.colors.cardBackground,
     borderRadius: theme.borderRadius.lg,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.35,
-    shadowRadius: 16,
-    elevation: 12,
+    ...theme.shadows.large,
   },
   cardTitle: {
     ...theme.typography.h2,
