@@ -2,26 +2,26 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { useAuth } from '../context/AuthContext';
-import { LoadingScreen } from '../components/LoadingScreen';
-import { LoginScreen } from '../screens/LoginScreen';
+import { useAuth } from '../context/AuthContext.jsx';
+import { LoadingScreen } from '../components/LoadingScreen.jsx';
+import { LoginScreen } from '../screens/LoginScreen.jsx';
 import { Ionicons } from '@expo/vector-icons';
 
 // Import screens for different user types
-import { PlayerHomeScreen } from '../screens/PlayerHomeScreen';
-import { PlayerProfileScreen } from '../screens/PlayerProfileScreen';
-import { PlayerStatsScreen } from '../screens/PlayerStatsScreen';
-import { PlayerVideosScreen } from '../screens/PlayerVideosScreen';
+import { PlayerHomeScreen } from '../screens/PlayerHomeScreen.jsx';
+import { PlayerProfileScreen } from '../screens/PlayerProfileScreen.jsx';
+import { PlayerStatsScreen } from '../screens/PlayerStatsScreen.jsx';
+import { PlayerVideosScreen } from '../screens/PlayerVideosScreen.jsx';
 
-import { ScoutHomeScreen } from '../screens/ScoutHomeScreen';
-import { ScoutSearchScreen } from '../screens/ScoutSearchScreen';
-import { ScoutFavoritesScreen } from '../screens/ScoutFavoritesScreen';
-import { ScoutMessagesScreen } from '../screens/ScoutMessagesScreen';
+import { ScoutHomeScreen } from '../screens/ScoutHomeScreen.jsx';
+import { ScoutSearchScreen } from '../screens/ScoutSearchScreen.jsx';
+import { ScoutFavoritesScreen } from '../screens/ScoutFavoritesScreen.jsx';
+import { ScoutMessagesScreen } from '../screens/ScoutMessagesScreen.jsx';
 
-import { AdminHomeScreen } from '../screens/AdminHomeScreen';
-import { AdminUsersScreen } from '../screens/AdminUsersScreen';
-import { AdminReportsScreen } from '../screens/AdminReportsScreen';
-import { AdminSettingsScreen } from '../screens/AdminSettingsScreen';
+import { AdminHomeScreen } from '../screens/AdminHomeScreen.jsx';
+import { AdminUsersScreen } from '../screens/AdminUsersScreen.jsx';
+import { AdminReportsScreen } from '../screens/AdminReportsScreen.jsx';
+import { AdminSettingsScreen } from '../screens/AdminSettingsScreen.jsx';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();

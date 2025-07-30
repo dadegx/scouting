@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, FlatList } from 'react-native';
 import { Card, Button, Avatar, Chip, Searchbar, FAB } from 'react-native-paper';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../context/AuthContext.jsx';
 import { LinearGradient } from 'expo-linear-gradient';
 
 export const ScoutHomeScreen = ({ navigation }) => {

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Dimensions } from 'react-native';
 import { Card, Button, FAB, Avatar, Chip, ProgressBar } from 'react-native-paper';
-import { useAuth } from '../context/AuthContext';
-import { theme } from '../utils/theme';
+import { useAuth } from '../context/AuthContext.jsx';
+import { theme } from '../utils/theme.jsx';
 import { LinearGradient } from 'expo-linear-gradient';
 import { SafeAreaView } from 'react-native-safe-area-context';
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { Card, Button } from 'react-native-paper';
-import { useAuth } from '../context/AuthContext';
-import { theme } from '../utils/theme';
+import { useAuth } from '../context/AuthContext.jsx';
+import { theme } from '../utils/theme.jsx';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export const AdminSettingsScreen = () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { Card, FAB } from 'react-native-paper';
-import { theme } from '../utils/theme';
+import { theme } from '../utils/theme.jsx';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export const ScoutMessagesScreen = () => {

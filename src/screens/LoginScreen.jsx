@@ -4,8 +4,8 @@ import { TextInput, Button, Card, Chip } from 'react-native-paper';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import Toast from 'react-native-toast-message';
-import { useAuth } from '../context/AuthContext';
-import { theme } from '../utils/theme';
+import { useAuth } from '../context/AuthContext.jsx';
+import { theme } from '../utils/theme.jsx';
 import { LinearGradient } from 'expo-linear-gradient';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
