@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Dimensions } from 'react-native';
 import { Card, Button, FAB, Avatar, Chip, ProgressBar } from 'react-native-paper';
 import { useAuth } from '../context/AuthContext.jsx';
-import { theme } from '../utils/theme.jsx';
+import { theme, themeColors, themeSpacing, themeTypography } from '../config/theme.jsx';
 import { LinearGradient } from 'expo-linear-gradient';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -34,7 +34,7 @@ export const PlayerHomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <LinearGradient
-        colors={theme.colors.gradientPrimary}
+        colors={themeColors.gradientPrimary}
         style={styles.headerGradient}
       >
         <View style={styles.header}>
@@ -142,80 +142,80 @@ export const PlayerHomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.background,
+    backgroundColor: themeColors.background,
   },
   headerGradient: {
-    paddingVertical: theme.spacing.xl,
+    paddingVertical: themeSpacing.xl,
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: theme.spacing.md,
+    paddingHorizontal: themeSpacing.md,
   },
   userInfo: {
     flexDirection: 'row',
     alignItems: 'center',
   },
   userText: {
-    marginLeft: theme.spacing.md,
+    marginLeft: themeSpacing.md,
   },
   welcomeText: {
-    ...theme.typography.h3,
-    color: theme.colors.onPrimary,
+    ...themeTypography.h3,
+    color: themeColors.onPrimary,
   },
   userType: {
-    ...theme.typography.body1,
-    color: theme.colors.onPrimary,
+    ...themeTypography.body1,
+    color: themeColors.onPrimary,
     opacity: 0.9,
   },
   content: {
     flex: 1,
-    padding: theme.spacing.md,
+    padding: themeSpacing.md,
   },
   statsContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: theme.spacing.md,
+    marginBottom: themeSpacing.md,
   },
   statCard: {
     width: (width - 50) / 3,
-    backgroundColor: theme.colors.cardBackground,
+    backgroundColor: themeColors.cardBackground,
     ...theme.shadows.small,
   },
   statContent: {
     alignItems: 'center',
-    paddingVertical: theme.spacing.sm,
+    paddingVertical: themeSpacing.sm,
   },
   statNumber: {
-    ...theme.typography.h3,
-    color: theme.colors.primary,
+    ...themeTypography.h3,
+    color: themeColors.primary,
   },
   statLabel: {
-    ...theme.typography.caption,
-    color: theme.colors.textSecondary,
+    ...themeTypography.caption,
+    color: themeColors.textSecondary,
     textAlign: 'center',
   },
   card: {
-    marginBottom: theme.spacing.md,
-    backgroundColor: theme.colors.cardBackground,
+    marginBottom: themeSpacing.md,
+    backgroundColor: themeColors.cardBackground,
     borderRadius: theme.borderRadius.md,
     ...theme.shadows.small,
   },
   cardTitle: {
-    ...theme.typography.h4,
-    color: theme.colors.primary,
-    marginBottom: theme.spacing.md,
+    ...themeTypography.h4,
+    color: themeColors.primary,
+    marginBottom: themeSpacing.md,
   },
   ratingContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: theme.spacing.md,
+    marginBottom: themeSpacing.md,
   },
   ratingText: {
-    ...theme.typography.h3,
-    color: theme.colors.primary,
-    marginRight: theme.spacing.md,
+    ...themeTypography.h3,
+    color: themeColors.primary,
+    marginRight: themeSpacing.md,
   },
   progressBar: {
     flex: 1,
@@ -227,8 +227,8 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   chip: {
-    marginRight: theme.spacing.sm,
-    marginBottom: theme.spacing.sm,
+    marginRight: themeSpacing.sm,
+    marginBottom: themeSpacing.sm,
   },
   actionsGrid: {
     flexDirection: 'row',
@@ -237,7 +237,7 @@ const styles = StyleSheet.create({
   },
   actionButton: {
     width: (width - 70) / 2,
-    marginBottom: theme.spacing.sm,
+    marginBottom: themeSpacing.sm,
   },
   actionButtonContent: {
     height: 50,
@@ -245,34 +245,34 @@ const styles = StyleSheet.create({
   activityItem: {
     flexDirection: 'row',
     alignItems: 'flex-start',
-    marginBottom: theme.spacing.md,
+    marginBottom: themeSpacing.md,
   },
   activityDot: {
     width: 8,
     height: 8,
     borderRadius: 4,
-    backgroundColor: theme.colors.primary,
+    backgroundColor: themeColors.primary,
     marginTop: 6,
-    marginRight: theme.spacing.sm,
+    marginRight: themeSpacing.sm,
   },
   activityContent: {
     flex: 1,
   },
   activityText: {
-    ...theme.typography.body2,
-    color: theme.colors.textPrimary,
+    ...themeTypography.body2,
+    color: themeColors.textPrimary,
     lineHeight: 20,
   },
   activityTime: {
-    ...theme.typography.caption,
-    color: theme.colors.textSecondary,
+    ...themeTypography.caption,
+    color: themeColors.textSecondary,
     marginTop: 4,
   },
   fab: {
     position: 'absolute',
-    right: theme.spacing.md,
-    bottom: theme.spacing.md,
-    backgroundColor: theme.colors.primary,
+    right: themeSpacing.md,
+    bottom: themeSpacing.md,
+    backgroundColor: themeColors.primary,
   },
   bottomSpacing: {
     height: 80,

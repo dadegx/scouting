@@ -60,11 +60,11 @@ const PlayerTabs = () => (
         
         return <Ionicons name={iconName} size={size} color={color} />;
       },
-      tabBarActiveTintColor: theme.colors.primary,
-      tabBarInactiveTintColor: theme.colors.textSecondary,
+      tabBarActiveTintColor: themeColors.primary,
+      tabBarInactiveTintColor: themeColors.textSecondary,
       tabBarStyle: {
-        backgroundColor: theme.colors.surface,
-        borderTopColor: theme.colors.border,
+        backgroundColor: themeColors.surface,
+        borderTopColor: themeColors.border,
         paddingBottom: 8,
         paddingTop: 8,
         height: 70,
@@ -125,11 +125,11 @@ const ScoutTabs = () => (
         
         return <Ionicons name={iconName} size={size} color={color} />;
       },
-      tabBarActiveTintColor: theme.colors.primary,
-      tabBarInactiveTintColor: theme.colors.textSecondary,
+      tabBarActiveTintColor: themeColors.primary,
+      tabBarInactiveTintColor: themeColors.textSecondary,
       tabBarStyle: {
-        backgroundColor: theme.colors.surface,
-        borderTopColor: theme.colors.border,
+        backgroundColor: themeColors.surface,
+        borderTopColor: themeColors.border,
         paddingBottom: 8,
         paddingTop: 8,
         height: 70,
@@ -190,11 +190,11 @@ const AdminTabs = () => (
         
         return <Ionicons name={iconName} size={size} color={color} />;
       },
-      tabBarActiveTintColor: theme.colors.primary,
-      tabBarInactiveTintColor: theme.colors.textSecondary,
+      tabBarActiveTintColor: themeColors.primary,
+      tabBarInactiveTintColor: themeColors.textSecondary,
       tabBarStyle: {
-        backgroundColor: theme.colors.surface,
-        borderTopColor: theme.colors.border,
+        backgroundColor: themeColors.surface,
+        borderTopColor: themeColors.border,
         paddingBottom: 8,
         paddingTop: 8,
         height: 70,
@@ -254,19 +254,7 @@ export const AppNavigator = () => {
   const TabNavigator = getTabNavigator();
 
   return (
-    <NavigationContainer
-      theme={{
-        dark: true,
-        colors: {
-          primary: theme.colors.primary,
-          background: theme.colors.background,
-          card: theme.colors.surface,
-          text: theme.colors.textPrimary,
-          border: theme.colors.border,
-          notification: theme.colors.primary,
-        },
-      }}
-    >
+    <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {user && TabNavigator ? (
           <Stack.Screen name="MainTabs" component={TabNavigator} />

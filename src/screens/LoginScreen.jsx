@@ -5,7 +5,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import Toast from 'react-native-toast-message';
 import { useAuth } from '../context/AuthContext.jsx';
-import { theme } from '../utils/theme.jsx';
+import { theme, themeColors, themeSpacing, themeTypography } from '../config/theme.jsx';
 import { LinearGradient } from 'expo-linear-gradient';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -45,7 +45,7 @@ export const LoginScreen = ({ navigation }) => {
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       >
         <LinearGradient
-          colors={theme.colors.gradientPrimary}
+          colors={themeColors.gradientPrimary}
           style={styles.gradient}
         >
           <ScrollView contentContainerStyle={styles.scrollContainer}>
@@ -106,7 +106,7 @@ export const LoginScreen = ({ navigation }) => {
                           onBlur={handleBlur('name')}
                           style={styles.input}
                           error={touched.name && errors.name}
-                          theme={{ colors: { background: theme.colors.inputBackground } }}
+                          theme={{ colors: { background: themeColors.inputBackground } }}
                         />
                       )}
 
@@ -120,7 +120,7 @@ export const LoginScreen = ({ navigation }) => {
                         autoCapitalize="none"
                         style={styles.input}
                         error={touched.email && errors.email}
-                        theme={{ colors: { background: theme.colors.inputBackground } }}
+                        theme={{ colors: { background: themeColors.inputBackground } }}
                       />
                       {touched.email && errors.email && (
                         <Text style={styles.errorText}>{errors.email}</Text>
@@ -135,7 +135,7 @@ export const LoginScreen = ({ navigation }) => {
                         secureTextEntry
                         style={styles.input}
                         error={touched.password && errors.password}
-                        theme={{ colors: { background: theme.colors.inputBackground } }}
+                        theme={{ colors: { background: themeColors.inputBackground } }}
                       />
                       {touched.password && errors.password && (
                         <Text style={styles.errorText}>{errors.password}</Text>
@@ -146,7 +146,7 @@ export const LoginScreen = ({ navigation }) => {
                         onPress={handleSubmit}
                         loading={isSubmitting}
                         style={styles.button}
-                        buttonColor={theme.colors.primary}
+                        buttonColor={themeColors.primary}
                       >
                         {isLogin ? 'Accedi' : 'Registrati'}
                       </Button>
@@ -155,7 +155,7 @@ export const LoginScreen = ({ navigation }) => {
                         mode="text"
                         onPress={() => setIsLogin(!isLogin)}
                         style={styles.switchButton}
-                        textColor={theme.colors.primary}
+                        textColor={themeColors.primary}
                       >
                         {isLogin 
                           ? 'Non hai un account? Registrati' 
@@ -177,7 +177,7 @@ export const LoginScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.background,
+    backgroundColor: themeColors.background,
   },
   keyboardContainer: {
     flex: 1,
@@ -187,47 +187,47 @@ const styles = StyleSheet.create({
   },
   scrollContainer: {
     flexGrow: 1,
-    padding: theme.spacing.md,
+    padding: themeSpacing.md,
     justifyContent: 'center',
   },
   header: {
     alignItems: 'center',
-    marginBottom: theme.spacing.xl,
+    marginBottom: themeSpacing.xl,
   },
   title: {
-    ...theme.typography.h1,
-    color: theme.colors.onPrimary,
+    ...themeTypography.h1,
+    color: themeColors.onPrimary,
     textAlign: 'center',
-    marginBottom: theme.spacing.sm,
+    marginBottom: themeSpacing.sm,
   },
   subtitle: {
-    ...theme.typography.body1,
-    color: theme.colors.onPrimary,
+    ...themeTypography.body1,
+    color: themeColors.onPrimary,
     opacity: 0.9,
     textAlign: 'center',
     lineHeight: 22,
   },
   card: {
-    backgroundColor: theme.colors.cardBackground,
+    backgroundColor: themeColors.cardBackground,
     borderRadius: theme.borderRadius.lg,
     ...theme.shadows.large,
   },
   cardTitle: {
-    ...theme.typography.h2,
-    color: theme.colors.primary,
+    ...themeTypography.h2,
+    color: themeColors.primary,
     textAlign: 'center',
-    marginBottom: theme.spacing.md,
+    marginBottom: themeSpacing.md,
   },
   userTypeLabel: {
-    ...theme.typography.body1,
-    color: theme.colors.textPrimary,
-    marginBottom: theme.spacing.sm,
+    ...themeTypography.body1,
+    color: themeColors.textPrimary,
+    marginBottom: themeSpacing.sm,
     fontWeight: '500',
   },
   userTypeButtons: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: theme.spacing.md,
+    marginBottom: themeSpacing.md,
   },
   userTypeChip: {
     flex: 1,
@@ -237,18 +237,18 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   input: {
-    marginBottom: theme.spacing.sm,
+    marginBottom: themeSpacing.sm,
   },
   errorText: {
-    color: theme.colors.error,
+    color: themeColors.error,
     fontSize: 12,
-    marginBottom: theme.spacing.sm,
+    marginBottom: themeSpacing.sm,
   },
   button: {
-    marginTop: theme.spacing.md,
-    paddingVertical: theme.spacing.xs,
+    marginTop: themeSpacing.md,
+    paddingVertical: themeSpacing.xs,
   },
   switchButton: {
-    marginTop: theme.spacing.sm,
+    marginTop: themeSpacing.sm,
   },
 });

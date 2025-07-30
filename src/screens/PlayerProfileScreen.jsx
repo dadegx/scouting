@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { Card, Button, Avatar } from 'react-native-paper';
 import { useAuth } from '../context/AuthContext.jsx';
-import { theme } from '../utils/theme.jsx';
+import { theme, themeColors, themeSpacing, themeTypography } from '../config/theme.jsx';
 import { LinearGradient } from 'expo-linear-gradient';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -12,7 +12,7 @@ export const PlayerProfileScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <LinearGradient
-        colors={theme.colors.gradientPrimary}
+        colors={themeColors.gradientPrimary}
         style={styles.headerGradient}
       >
         <View style={styles.header}>
@@ -54,7 +54,7 @@ export const PlayerProfileScreen = () => {
               mode="contained" 
               onPress={logout} 
               style={styles.logoutButton}
-              buttonColor={theme.colors.error}
+              buttonColor={themeColors.error}
             >
               Esci dall'account
             </Button>
@@ -68,58 +68,58 @@ export const PlayerProfileScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.background,
+    backgroundColor: themeColors.background,
   },
   headerGradient: {
-    paddingVertical: theme.spacing.xl,
+    paddingVertical: themeSpacing.xl,
     alignItems: 'center',
   },
   header: {
     alignItems: 'center',
   },
   avatar: {
-    backgroundColor: theme.colors.surface,
-    marginBottom: theme.spacing.md,
+    backgroundColor: themeColors.surface,
+    marginBottom: themeSpacing.md,
   },
   name: {
-    ...theme.typography.h2,
-    color: theme.colors.onPrimary,
-    marginBottom: theme.spacing.xs,
+    ...themeTypography.h2,
+    color: themeColors.onPrimary,
+    marginBottom: themeSpacing.xs,
   },
   subtitle: {
-    ...theme.typography.body1,
-    color: theme.colors.onPrimary,
+    ...themeTypography.body1,
+    color: themeColors.onPrimary,
     opacity: 0.9,
   },
   content: {
     flex: 1,
-    padding: theme.spacing.md,
+    padding: themeSpacing.md,
   },
   card: {
-    backgroundColor: theme.colors.cardBackground,
-    marginBottom: theme.spacing.md,
+    backgroundColor: themeColors.cardBackground,
+    marginBottom: themeSpacing.md,
     borderRadius: theme.borderRadius.md,
   },
   cardTitle: {
-    ...theme.typography.h4,
-    color: theme.colors.primary,
-    marginBottom: theme.spacing.md,
+    ...themeTypography.h4,
+    color: themeColors.primary,
+    marginBottom: themeSpacing.md,
   },
   infoRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: theme.spacing.sm,
+    marginBottom: themeSpacing.sm,
   },
   infoLabel: {
-    ...theme.typography.body1,
-    color: theme.colors.textSecondary,
+    ...themeTypography.body1,
+    color: themeColors.textSecondary,
   },
   infoValue: {
-    ...theme.typography.body1,
-    color: theme.colors.textPrimary,
+    ...themeTypography.body1,
+    color: themeColors.textPrimary,
     fontWeight: '500',
   },
   logoutButton: {
-    marginTop: theme.spacing.md,
+    marginTop: themeSpacing.md,
   },
 });

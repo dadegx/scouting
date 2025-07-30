@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { Card } from 'react-native-paper';
-import { theme } from '../utils/theme.jsx';
+import { theme, themeColors, themeSpacing, themeTypography } from '../config/theme.jsx';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export const ScoutFavoritesScreen = () => {
@@ -29,33 +29,33 @@ export const ScoutFavoritesScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.background,
+    backgroundColor: themeColors.background,
   },
   header: {
-    padding: theme.spacing.md,
-    backgroundColor: theme.colors.surface,
+    padding: themeSpacing.md,
+    backgroundColor: themeColors.surface,
   },
   title: {
-    ...theme.typography.h2,
-    color: theme.colors.primary,
+    ...themeTypography.h2,
+    color: themeColors.primary,
     textAlign: 'center',
   },
   content: {
     flex: 1,
-    padding: theme.spacing.md,
+    padding: themeSpacing.md,
   },
   card: {
-    backgroundColor: theme.colors.cardBackground,
+    backgroundColor: themeColors.cardBackground,
     borderRadius: theme.borderRadius.md,
   },
   cardTitle: {
-    ...theme.typography.h3,
-    color: theme.colors.primary,
-    marginBottom: theme.spacing.md,
+    ...themeTypography.h3,
+    color: themeColors.primary,
+    marginBottom: themeSpacing.md,
   },
   description: {
-    ...theme.typography.body1,
-    color: theme.colors.textSecondary,
+    ...themeTypography.body1,
+    color: themeColors.textSecondary,
     lineHeight: 24,
   },
 });
