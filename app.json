@@ -5,7 +5,11 @@
     "version": "1.0.0",
     "sdkVersion": "53.0.0",
     "orientation": "portrait",
-    "platforms": ["ios", "android", "web"],
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "userInterfaceStyle": "light",
     "splash": {
       "backgroundColor": "#2E7D32",
@@ -15,13 +19,19 @@
       "supportsTablet": true
     },
     "android": {
-      "backgroundColor": "#2E7D32"
+      "backgroundColor": "#2E7D32",
+      "package": "com.dadegx.footballscouting"
     },
     "web": {
       "bundler": "metro"
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "d49023cc-b447-407b-9069-71948515a310"
+      }
+    }
   }
 }
